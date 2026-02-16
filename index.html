@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forsheda – Kartor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Forsheda – Kartor</h1>
+    <p>Byt mellan två kartområden.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Kartval">
+      <button id="btn1" class="btn active" type="button">Område 1</button>
+      <button id="btn2" class="btn" type="button">Område 2</button>
+    </section>
+
+    <figure class="map-card">
+      <img
+        id="mapImage"
+        src="images/karta_omrade_1.png"
+        alt="Karta över område 1"
+        loading="eager"
+      />
+      <figcaption id="caption">Område 1</figcaption>
+    </figure>
+  </main>
+
+  <footer class="footer">
+    <small>Skapad med GitHub Pages</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

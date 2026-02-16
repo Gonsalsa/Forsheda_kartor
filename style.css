@@ -1,0 +1,129 @@
+
+
+:root {
+  --bg: #0b1220;
+  --card: #121a2b;
+  --text: #e8eefc;
+  --muted: #b7c3e6;
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% 0%, #162242 0%, var(--bg) 60%);
+  color: var(--text);
+}
+
+.header {
+  padding: 28px 16px 10px;
+  text-align: center;
+}
+
+.header h1 { margin: 0 0 6px; font-size: 28px; }
+.header p { margin: 0; color: var(--muted); }
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 14px 0 16px;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.05s ease, background 0.15s ease;
+}
+
+.btn:hover { background: rgba(255,255,255,0.10); }
+.btn:active { transform: translateY(1px); }
+
+.btn.active {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.map-card {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.map-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #0a0f1d;
+}
+
+.map-card figcaption {
+  padding: 10px 12px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 18px 12px 28px;
+  color: var(--muted);
+}
+
+
+/* Mobilanpassning */
+@media (max-width: 600px) {
+  .header {
+    padding-top: 20px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .controls {
+    gap: 8px;
+  }
+
+  .btn {
+    flex: 1;              /* knapparna fyller bredden */
+    padding: 12px 10px;   /* större tryckyta */
+    border-radius: 14px;
+    font-size: 16px;
+  }
+
+  .map-card {
+    border-radius: 14px;
+  }
+
+  .map-card figcaption {
+    font-size: 14px;
+  }
+}
+
+/* Säkra att bilden alltid skalar snyggt */
+.map-card img {
+  max-width: 100%;
+  height: auto;
+}
